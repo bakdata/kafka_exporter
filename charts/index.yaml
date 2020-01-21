@@ -3,9 +3,9 @@ entries:
   kafka-exporter:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-01-21T08:45:55.831106141+01:00"
+    created: "2020-01-21T09:01:47.879620285+01:00"
     description: A Helm chart for Kubernetes
-    digest: 549522f8297da3a04259513abf561cd7248022a5bfba24abdc7f137d2183a0df
+    digest: 4519e035e8e3ccb231b1dc488ca9db185f0103b27c14e4c270eda2bc67fd09ca
     home: https://github.com/abhishekjiitr/kafka-exporter-helm
     maintainers:
     - email: abhi2254015@gmail.com
@@ -14,4 +14,4 @@ entries:
     urls:
     - kafka-exporter/kafka-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2020-01-21T08:45:55.83053675+01:00"
+generated: "2020-01-21T09:01:47.879129616+01:00"
