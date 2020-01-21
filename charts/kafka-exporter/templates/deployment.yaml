@@ -34,7 +34,7 @@ spec:
             {{- end }}
             {{- if .Values.kafkaExporter.sasl.enabled }}
             - --sasl.enabled
-	    {{- if .Values.kafkaExporter.sasl.handshake }}
+            {{- if .Values.kafkaExporter.sasl.handshake }}
             - --sasl.handshake
             {{- end }}
             {{- if not .Values.kafkaExporter.sasl.handshake }}
@@ -45,9 +45,9 @@ spec:
             {{- end }}
             {{- if .Values.kafkaExporter.tls.enabled}}
             - --tls.enabled
-	    {{- if .Values.kafkaExporter.tls.insecure-skip-tls-verify}}
-	    - --tls.insecure-skip-tls-verify
-	    {{- end }}
+            {{- if .Values.kafkaExporter.tls.insecureSkipTlsVerify}}
+            - --tls.insecure-skip-tls-verify
+            {{- end }}
             {{- end }}
             {{- if .Values.kafkaExporter.log }}
             - --log.level={{ .Values.kafkaExporter.log.level }}
