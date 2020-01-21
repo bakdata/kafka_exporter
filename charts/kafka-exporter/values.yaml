@@ -30,7 +30,7 @@ kafkaExporter:
 
   tls:
     enabled: false
-    insecure-skip-tls-verify: false
+    insecureSkipTlsVerify: false
     caFile: ""
     certFile: ""
     keyFile: ""
