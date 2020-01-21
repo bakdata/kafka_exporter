@@ -18,6 +18,11 @@ spec:
       labels:
         app.kubernetes.io/name: {{ include "kafka-exporter.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
+      {{- if .Values.annotations }}
+      annotations:
+      {{- range $key, $value := .Values.annotations }}
+        {{ $key | quote }}: {{ $value | quote }}
+      {{- end }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
