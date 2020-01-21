@@ -23,6 +23,7 @@ spec:
       {{- range $key, $value := .Values.annotations }}
         {{ $key | quote }}: {{ $value | quote }}
       {{- end }}
+      {{- end }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
