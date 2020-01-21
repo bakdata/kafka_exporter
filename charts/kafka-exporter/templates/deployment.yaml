@@ -42,9 +42,6 @@ spec:
             {{- end }}
             {{- if .Values.kafkaExporter.tls.enabled}}
             - --tls.enabled
-            - --tls.ca-file=/etc/tls-certs/ca-file
-            - --tls.cert-file=/etc/tls-certs/cert-file
-            - --tls.key-file=/etc/tls-certs/key-file
             {{- end }}
             {{- if .Values.kafkaExporter.log }}
             - --log.level={{ .Values.kafkaExporter.log.level }}
@@ -56,12 +53,6 @@ spec:
             - name: metrics
               containerPort: 9308
               protocol: TCP
-          {{- if .Values.kafkaExporter.tls.enabled }}
-          volumeMounts:
-          - name: tls-certs
-            mountPath: "/etc/tls-certs/"
-            readOnly: true
-          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
