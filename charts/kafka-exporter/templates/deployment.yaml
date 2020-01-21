@@ -77,9 +77,3 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-    {{- if .Values.kafkaExporter.tls.enabled }}
-      volumes:
-      - name: tls-certs
-        secret:
-          secretName: {{ include "kafka-exporter.fullname" . }}
-    {{- end }}
